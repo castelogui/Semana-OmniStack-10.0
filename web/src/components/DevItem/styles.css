@@ -1,47 +1,72 @@
-
 li.dev-item{
-    background: #FFF;
+    background: rgb(137, 139, 139);
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
-    border-radius: 2px;
+    border-radius: 15px;
     padding: 20px;
+    border: #333;
+
 }
 li.dev-item header {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 li.dev-item header img{
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    border-radius: 15%;
+
 }
 li.dev-item header .user-info {
     margin-left: 10px;
 }
+
+.user-info h3 {
+    display: block;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
 .user-info strong {
     display: block;
-    font-size: 16px;
-    color: #333;
+    font-size: 14px;
+    color: #5a2ea6;
 }
 .user-info span{
     font-size: 13px;
-    color: #999;
+    color: rgb(33, 1, 85);
     margin-top: 2px;
 }
 
-li.dev-info p{
-    color: #666;
-    font-size: 14px;
+li.dev-item p{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
     line-height: 20px;
-    margin: 10px 0;
+    margin: 10px;
 }
 
-li.dev-info a{
-    color: #8e4dff;
-    font-size: 14px;
+li.dev-item button{
+    height: 35px;
+    padding: 8px;
+    margin: 2px;
+    border: none;
+    border-radius: 10px;
+    background: none;
+    background: linear-gradient(to right, #6278f3, #e7e419);
+    transition-delay: 0.5s;
+}
+li.dev-item button:hover{
+    background: linear-gradient(to right, #99970e, #70779b);
+    transition-delay: 0.5s;
+}
+
+li.dev-item button a{
+    background-color: none;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
     text-decoration: none;
+    transition-delay: 0.5s;
 }
 
-li.dev-item a:hover{
-    color: #5a2ea6;
-}
