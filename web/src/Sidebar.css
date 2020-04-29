@@ -1,8 +1,8 @@
 aside {
     width: 328px;
-    background: rgb(112, 110, 110);
+    background: #FFF;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
-    border-radius: 15px;
+    border-radius: 2px;
     padding: 30px 20px;
 }
 
@@ -10,7 +10,7 @@ aside strong{
     font-size: 20px;
     text-align: center;
     font-display: block;
-    color: rgb(0, 0, 0);
+    color: #333;
 }
 
 aside form{
@@ -33,7 +33,7 @@ aside form .input-group .input-block{
 }
 
 aside form .input-block label{
-    color: rgb(43, 38, 61);
+    color: #ACACAC;
     font-size: 14px;
     font-weight: bold;
     display: block;
@@ -45,16 +45,14 @@ aside form .input-block input{
     font-size: 14px;
     color: #666;
     border-bottom: 1px solid #eee;
-    border: 0;
-    border-radius: 10px;
 }
 
 aside form button[type=submit]{
     width: 100%;
     border: 0;
     margin-top: 30px;
-    background: #5e2eb1;
-    border-radius: 10px;
+    background: #7d40e7;
+    border-radius: 2px;
     padding: 15px 20px;
     font-size: 16px;
     font-weight: bold;

@@ -7,17 +7,12 @@ function DevItem({dev}){
             <header>
                 <img src={dev.avatar_url} alt={dev.name}/>
                 <div className="user-info">
-                    <h3>{dev.name}</h3>
-                    <strong>{dev.github_username}</strong>
+                    <strong>{dev.name}</strong>
                     <span>{dev.techs.join(', ')}</span>
                 </div>
             </header>
             <p>{dev.bio}</p>
-            <div>
-                <button class="link">
-                    <a href={`https://github.com/${dev.github_username}`}>Perfil de {dev.github_username}</a>
-                </button>
-            </div>
+            <a href={`https://github.com/${dev.github_username}`}>Acessar Perfil no GitHub</a>
         </li>
     );
 }
