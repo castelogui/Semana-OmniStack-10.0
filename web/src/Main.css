@@ -13,5 +13,6 @@ main ul {
     main ul{
         grid-template-columns: 1fr;
         align-items: center;
+        min-width: 400px;
     }
 }
