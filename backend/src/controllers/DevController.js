@@ -15,9 +15,18 @@ module.exports = {
 
         if (!dev) {
             const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
+            
+            const apiResponseRepos = await axios.get(`https://api.github.com/users/${github_username}/repos`)
+            
             //continuar
-            const { name = login, avatar_url, bio, blog } = apiResponse.data;
-    
+            const { name = login, avatar_url, bio } = apiResponse.data;
+            
+            const repo = apiResponseRepos.data;
+
+            const reposArray = parseStringAsArray(repo);
+
+            const { full_name } = reposArray
+            
             const techsArray = parseStringAsArray(techs);
     
             const location = {
@@ -30,9 +39,9 @@ module.exports = {
                 name,
                 avatar_url,
                 bio,
-                blog,
                 techs: techsArray,
                 location,
+                repos: full_name
             })
 
             // Filtrar as conexões que estao a no max 10km de distancia

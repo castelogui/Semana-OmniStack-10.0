@@ -46,22 +46,28 @@ li.dev-item p{
 }
 
 li.dev-item .link{
-    padding: 8px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(to right, #6278f3, #e7e419);
-    transition: 0.5s;
-}
-li.dev-item .link:hover{
-    background: linear-gradient(to right, #99970e, #70779b);
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-li.dev-item .link a{
-    background-color: none;
+li.dev-item a{
+    align-items: center;
+    display: inline-block;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(0, 0, 0);
     border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #333;
     text-decoration: none;
-    transition: 0.5s;
+    background: linear-gradient(to right, #6278f3, #e7e419);
+}
+li.dev-item a:hover{
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    text-decoration: solid;
+    background: linear-gradient(to right, #e7e419, #5b6fe2);
 }
