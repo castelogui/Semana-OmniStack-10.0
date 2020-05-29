@@ -10,9 +10,10 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
-mongoose.connect('mongodb+srv://castelo:_____@cluster0-u7za1.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://castelogui:_____@clusterdevradar-kwxar.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
 });
 
 app.use(cors())

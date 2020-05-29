@@ -1,7 +1,7 @@
 const axios = require('axios');
 const Dev = require('../models/Dev');
 const parseStringAsArray = require('../utils/parseStringAsArray');
-const { findConnections, sedMassage } = require('../websocket');
+const { findConnections, sendMessage } = require('../websocket');
 
 module.exports = {
     async index(request, response) {
@@ -16,16 +16,16 @@ module.exports = {
         if (!dev) {
             const apiResponse = await axios.get(`https://api.github.com/users/${github_username}`);
             
-            const apiResponseRepos = await axios.get(`https://api.github.com/users/${github_username}/repos`)
+            // const apiResponseRepos = await axios.get(`https://api.github.com/users/${github_username}/repos`)
             
             //continuar
             const { name = login, avatar_url, bio } = apiResponse.data;
             
-            const repo = apiResponseRepos.data;
+            // const repo = apiResponseRepos.data;
 
-            const reposArray = parseStringAsArray(repo);
+            // const reposArray = parseStringAsArray(repo);
 
-            const { full_name } = reposArray
+            // const { full_name } = reposArray
             
             const techsArray = parseStringAsArray(techs);
     
@@ -41,7 +41,7 @@ module.exports = {
                 bio,
                 techs: techsArray,
                 location,
-                repos: full_name
+                // repos: full_name
             })
 
             // Filtrar as conexões que estao a no max 10km de distancia
@@ -52,7 +52,7 @@ module.exports = {
                 techsArray,
             )
 
-            sendMassage(sendSocketMassageTo, 'new-dev', dev);
+            sendMessage(sendSocketMassageTo, 'new-dev', dev);
         }
         return response.json(dev);
     }
